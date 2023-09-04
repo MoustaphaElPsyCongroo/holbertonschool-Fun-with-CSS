@@ -1,0 +1,46 @@
+.toggle-cb {
+  display: none;
+}
+.toggle-label {
+  position: relative;
+}
+
+.toggle-inner::before {
+  content: "No";
+  position: relative;
+  right: -40px;
+  top: 3px;
+  color: #c4c5c6;
+}
+
+.toggle-inner {
+  background-color: #ebebeb;
+  width: 70px;
+  height: 25px;
+  border: 2px lightgray solid;
+  border-radius: 15px;
+}
+
+.toggle-switch {
+  height: 33px;
+  width: 33px;
+  background-color: white;
+  border: 2px lightgray solid;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -5px;
+}
+
+.toggle-cb:checked + .toggle-label .toggle-inner::before {
+  content: "Yes";
+  left: 10px;
+  color: white;
+}
+
+.toggle-cb:checked + .toggle-label .toggle-inner {
+  background-color: #e1003c;
+}
+
+.toggle-cb:checked + .toggle-label .toggle-switch {
+  left: 40px;
+}
